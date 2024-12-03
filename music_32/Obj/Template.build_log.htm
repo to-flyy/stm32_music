@@ -1,0 +1,69 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 8613532846372, 1, LIC=14HV2-9UHJV-30TNC-75E6Z-8TH5I-J335Q
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.39.0.0
+Toolchain Path:  D:\Keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\MCU\STM32F103C8T6\STM32F103C8T6\FreeRtos\music\Template.uvprojx
+Project File Date:  12/03/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\Keil5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling main.c...
+.\Driver_HardWare\MP3\MP3.h(34): warning:  #1-D: last line of file ends without a newline
+  #endif
+User\main.c(128): warning:  #111-D: statement is unreachable
+  	vTaskDelete(NULL);
+User\main.c(138): warning:  #191-D: type qualifier is meaningless on cast type
+                                           (void *const)&K210_RxPacket,    
+User\main.c(163): warning:  #111-D: statement is unreachable
+  	vTaskDelete(NULL);
+User\main.c(133): warning:  #177-D: variable "cmd"  was declared but never referenced
+  	MotorCommand cmd;
+User\main.c(175): warning:  #111-D: statement is unreachable
+  	vTaskDelete(NULL);
+User\main.c(188): warning:  #111-D: statement is unreachable
+  	vTaskDelete(NULL);
+User\main.c(219): warning:  #111-D: statement is unreachable
+  	vTaskDelete(NULL);
+User\main.c(220): warning:  #1-D: last line of file ends without a newline
+  }
+User\main.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=8416 RO-data=336 RW-data=164 ZI-data=18732  
+FromELF: creating hex file...
+".\Obj\Template.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.1.0.pack
+                Keil::STM32F1xx_DFP@2.1.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  D:/Keil5/ARM/PACK/Keil/STM32F1xx_DFP/2.1.0/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

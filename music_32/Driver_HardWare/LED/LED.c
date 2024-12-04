@@ -18,5 +18,5 @@ void LED_Init()
 	LED1 = 0;
 	LED2 = 0;
 	LED3 = 0;
-	Flag_LED = 0;
+	Flag_LED = 1;
 }

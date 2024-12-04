@@ -50,3 +50,4 @@
 .\obj\main.o: .\Driver_HardWare\BuJin\motor.h
 .\obj\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\obj\main.o: .\Driver_HardWare\MP3\MP3.h
+.\obj\main.o: .\Driver_HardWare\YuYin\YuYin.h

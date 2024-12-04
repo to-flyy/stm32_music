@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\Driver_HardWare\LED;.\Public\system;.\Public\SysTick;.\Public\Delay;.\Driver_HardWare\KEY;.\freertos;.\freertos\inc;.\freertos\port;.\freertos\src;.\Driver_HardWare\K210;.\Driver_HardWare\BuJin;.\Driver_HardWare\MP3</IncludePath>
+              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\Driver_HardWare\LED;.\Public\system;.\Public\SysTick;.\Public\Delay;.\Driver_HardWare\KEY;.\freertos;.\freertos\inc;.\freertos\port;.\freertos\src;.\Driver_HardWare\K210;.\Driver_HardWare\BuJin;.\Driver_HardWare\MP3;.\Driver_HardWare\YuYin</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -468,6 +468,11 @@
               <FileName>MP3.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Driver_HardWare\MP3\MP3.c</FilePath>
+            </File>
+            <File>
+              <FileName>YuYin.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Driver_HardWare\YuYin\YuYin.c</FilePath>
             </File>
           </Files>
         </Group>

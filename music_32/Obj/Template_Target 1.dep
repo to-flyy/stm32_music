@@ -175,7 +175,7 @@ I (.\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h)(0x674FC0BF)
 I (.\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x674FC0BF)
 I (.\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x674FC0BF)
 I (.\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x674FC0BF)
-F (.\User\main.c)(0x674FC7D3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\User -I .\Libraries\CMSIS -I .\Libraries\STM32F10x_StdPeriph_Driver\inc -I .\Driver_HardWare\LED -I .\Public\system -I .\Public\SysTick -I .\Public\Delay -I .\Driver_HardWare\KEY -I .\freertos -I .\freertos\inc -I .\freertos\port -I .\freertos\src -I .\Driver_HardWare\K210 -I .\Driver_HardWare\BuJin -I .\Driver_HardWare\MP3 -I .\Driver_HardWare\YuYin-ID:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="539" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+F (.\User\main.c)(0x67510034)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\User -I .\Libraries\CMSIS -I .\Libraries\STM32F10x_StdPeriph_Driver\inc -I .\Driver_HardWare\LED -I .\Public\system -I .\Public\SysTick -I .\Public\Delay -I .\Driver_HardWare\KEY -I .\freertos -I .\freertos\inc -I .\freertos\port -I .\freertos\src -I .\Driver_HardWare\K210 -I .\Driver_HardWare\BuJin -I .\Driver_HardWare\MP3 -I .\Driver_HardWare\YuYin-ID:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="539" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
 I (.\Public\system\system.h)(0x674FC0BF)
 I (.\User\stm32f10x.h)(0x674FC0BF)
 I (.\Libraries\CMSIS\core_cm3.h)(0x674FC0BF)
@@ -225,7 +225,7 @@ I (.\Driver_HardWare\K210\K210.h)(0x674FC0BF)
 I (D:\Keil5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (.\Driver_HardWare\BuJin\motor.h)(0x674FC0BF)
 I (D:\Keil5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (.\Driver_HardWare\MP3\MP3.h)(0x674FC0BF)
+I (.\Driver_HardWare\MP3\MP3.h)(0x67510034)
 I (.\Driver_HardWare\YuYin\YuYin.h)(0x674FBD8F)
 F (.\User\stm32f10x_it.c)(0x674FC0BF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\User -I .\Libraries\CMSIS -I .\Libraries\STM32F10x_StdPeriph_Driver\inc -I .\Driver_HardWare\LED -I .\Public\system -I .\Public\SysTick -I .\Public\Delay -I .\Driver_HardWare\KEY -I .\freertos -I .\freertos\inc -I .\freertos\port -I .\freertos\src -I .\Driver_HardWare\K210 -I .\Driver_HardWare\BuJin -I .\Driver_HardWare\MP3 -I .\Driver_HardWare\YuYin-ID:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="539" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\obj\stm32f10x_it.o --omf_browse .\obj\stm32f10x_it.crf --depend .\obj\stm32f10x_it.d)
 I (User\stm32f10x_it.h)(0x674FC0BF)
@@ -412,8 +412,8 @@ I (.\freertos\port\portmacro.h)(0x674FC0BF)
 I (.\freertos\inc\mpu_wrappers.h)(0x674FC0BF)
 I (.\freertos\inc\task.h)(0x674FC0BF)
 I (.\freertos\inc\list.h)(0x674FC0BF)
-F (.\Driver_HardWare\MP3\MP3.c)(0x674FC0BF)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\User -I .\Libraries\CMSIS -I .\Libraries\STM32F10x_StdPeriph_Driver\inc -I .\Driver_HardWare\LED -I .\Public\system -I .\Public\SysTick -I .\Public\Delay -I .\Driver_HardWare\KEY -I .\freertos -I .\freertos\inc -I .\freertos\port -I .\freertos\src -I .\Driver_HardWare\K210 -I .\Driver_HardWare\BuJin -I .\Driver_HardWare\MP3 -I .\Driver_HardWare\YuYin-ID:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="539" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\obj\mp3.o --omf_browse .\obj\mp3.crf --depend .\obj\mp3.d)
-I (Driver_HardWare\MP3\MP3.h)(0x674FC0BF)
+F (.\Driver_HardWare\MP3\MP3.c)(0x6750FF3D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\User -I .\Libraries\CMSIS -I .\Libraries\STM32F10x_StdPeriph_Driver\inc -I .\Driver_HardWare\LED -I .\Public\system -I .\Public\SysTick -I .\Public\Delay -I .\Driver_HardWare\KEY -I .\freertos -I .\freertos\inc -I .\freertos\port -I .\freertos\src -I .\Driver_HardWare\K210 -I .\Driver_HardWare\BuJin -I .\Driver_HardWare\MP3 -I .\Driver_HardWare\YuYin-ID:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="539" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\obj\mp3.o --omf_browse .\obj\mp3.crf --depend .\obj\mp3.d)
+I (Driver_HardWare\MP3\MP3.h)(0x67510034)
 I (.\User\stm32f10x.h)(0x674FC0BF)
 I (.\Libraries\CMSIS\core_cm3.h)(0x674FC0BF)
 I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x57F606B8)

@@ -57,7 +57,7 @@ u8 KeyNum;
 int main()
 {
 	SysTick_Init(72);
-	K210_Init(115200);	
+	K210_Init(9600);	
 	MP3_USART_Init(9600);
 	YuYin_Init(9600);
 	LED_Init();
@@ -245,10 +245,6 @@ void LED_Task(void)
 	while(1)
 	{
 		vTaskDelay(pdMS_TO_TICKS(100));	
-//		Flag_LED = 1;
-//		vTaskDelay(500);
-//		Flag_LED = 0;
-//		vTaskDelay(500);
 	}
 	vTaskDelete(NULL);
 }

@@ -8,7 +8,7 @@ fm.register(6, fm.fpioa.UART1_RX, force=True)
 fm.register(7, fm.fpioa.UART1_TX, force=True)
 
 #串口初始化
-uart = UART(UART.UART1, 115200, timeout=1000 , read_buf_len=4096)
+uart = UART(UART.UART1, 9600, timeout=1000 , read_buf_len=4096)
 
 #LCD初始化
 lcd.init(freq=15000000)
@@ -29,7 +29,7 @@ task = kpu.load("/sd/model-165530.kmodel") #模型SD卡上
 #网络参数
 anchor = (6.72, 6.66, 6.84, 4.19, 6.78, 6.81, 6.91, 4.28, 6.94, 6.87)
 
-a = kpu.init_yolo2(task, 0.85, 0.20, 5, anchor)
+a = kpu.init_yolo2(task, 0.75, 0.20, 5, anchor)
 
 while(True):
 

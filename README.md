@@ -3,3 +3,6 @@ first commit:
 
 add YuYin without USART_LCD:
     添加了语音识别模块，还差个串口屏
+
+modify MP3_Pin:
+    将MP3的串口引脚从USART3改为USART1，和K210共用引脚，为串口腾出引脚

@@ -5,7 +5,7 @@ volatile bool isMP3Playing = false;
 /*USART2*/
 void MP3_USART_Init(uint32_t bound)
 {
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
 	RCC_APB2PeriphClockCmd(GPIO_TX_RX_RCC, ENABLE);
 	RCC_APB2PeriphClockCmd(GPIO_Busy_RCC, ENABLE);
 
@@ -35,9 +35,9 @@ void MP3_USART_Init(uint32_t bound)
 	USART_InitStructure.USART_Parity = USART_Parity_No;
 	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
 	USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-	USART_Init(USART2, &USART_InitStructure);
+	USART_Init(USART1, &USART_InitStructure);
 
-	USART_Cmd(USART2, ENABLE);
+	USART_Cmd(USART1, ENABLE);
 }
 
 /**********************************
@@ -46,9 +46,9 @@ void MP3_USART_Init(uint32_t bound)
 
 void MP3_Com(u8 com)
 {
-	USART_ClearFlag(USART2, USART_FLAG_TC);
-	USART_SendData(USART2, com);
-	while (!USART_GetFlagStatus(USART2, USART_FLAG_TC));	
+	USART_ClearFlag(USART1, USART_FLAG_TC);
+	USART_SendData(USART1, com);
+	while (!USART_GetFlagStatus(USART1, USART_FLAG_TC));	
 }
 
 /*通过JQ8400语音播报模块官方的软件查看发送的指令*/

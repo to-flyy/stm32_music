@@ -8,12 +8,12 @@
 #include "task.h"
 
 #define GPIO_TX_Port GPIOA
-#define GPIO_TX_Pin GPIO_Pin_2
+#define GPIO_TX_Pin GPIO_Pin_9
 
 #define GPIO_TX_RX_RCC RCC_APB2Periph_GPIOA
 
 #define GPIO_RX_Port GPIOA
-#define GPIO_RX_Pin GPIO_Pin_3
+#define GPIO_RX_Pin GPIO_Pin_10
 
 #define GPIO_Busy_Port GPIOC
 #define GPIO_Busy_Pin GPIO_Pin_14

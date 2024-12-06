@@ -6,3 +6,6 @@ add YuYin without USART_LCD:
 
 modify MP3_Pin:
     将MP3的串口引脚从USART3改为USART1，和K210共用引脚，为串口腾出引脚
+
+Closet Finshed:
+    将所有模块的功能都添加进去了，并且12/6测试了没问题，但是下午将代码完善，并且未测试 

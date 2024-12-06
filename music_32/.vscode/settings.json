@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "led.h": "c",
-        "system.h": "c",
-        "k210.h": "c",
-        "usart.h": "c"
-    }
-}

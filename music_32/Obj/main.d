@@ -44,10 +44,10 @@
 .\obj\main.o: .\freertos\inc\list.h
 .\obj\main.o: .\freertos\inc\queue.h
 .\obj\main.o: .\Driver_HardWare\LED\LED.h
-.\obj\main.o: .\Driver_HardWare\KEY\Key.h
 .\obj\main.o: .\Driver_HardWare\K210\K210.h
 .\obj\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\obj\main.o: .\Driver_HardWare\BuJin\motor.h
 .\obj\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\obj\main.o: .\Driver_HardWare\MP3\MP3.h
 .\obj\main.o: .\Driver_HardWare\YuYin\YuYin.h
+.\obj\main.o: .\Driver_HardWare\LCD\LCD.h

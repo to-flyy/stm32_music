@@ -22,14 +22,14 @@ sensor.run(1)                        #图像捕抓控制
 sensor.set_auto_whitebal(False)
 sensor.set_windowing((224, 224))     #设置LCD显示屏大小
 
-classes = ['JW', 'FZU', 'ZJL']
+classes = ['JW', 'ZJL', 'FZU']
 
-task = kpu.load("/sd/model-165530.kmodel") #模型SD卡上
+task = kpu.load("/sd/model-166275.kmodel") #模型SD卡上
 
 #网络参数
-anchor = (6.72, 6.66, 6.84, 4.19, 6.78, 6.81, 6.91, 4.28, 6.94, 6.87)
+anchor = (6.94, 6.87, 6.75, 6.91, 6.62, 6.66, 6.81, 6.75, 6.94, 6.94)
 
-a = kpu.init_yolo2(task, 0.75, 0.20, 5, anchor)
+a = kpu.init_yolo2(task, 0.70, 0.20, 5, anchor)
 
 while(True):
 

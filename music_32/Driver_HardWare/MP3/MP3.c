@@ -6,28 +6,27 @@ volatile bool isMP3Playing = false;
 void MP3_USART_Init(uint32_t bound)
 {
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
-	RCC_APB2PeriphClockCmd(GPIO_TX_RX_RCC, ENABLE);
-	RCC_APB2PeriphClockCmd(GPIO_Busy_RCC, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
 
-	// USART2_TX
+	// TX
 	GPIO_InitTypeDef GPIO_InitStructure;
-	GPIO_InitStructure.GPIO_Pin = GPIO_TX_Pin;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP; // 复用推挽输出
-	GPIO_Init(GPIO_TX_Port, &GPIO_InitStructure);
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP; 
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
 
-	// USART2_RX
-	GPIO_InitStructure.GPIO_Pin = GPIO_RX_Pin;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING; // 浮空输入
-	GPIO_Init(GPIO_RX_Port, &GPIO_InitStructure);
+	// RX
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING; 
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
 
 	// Busy
-	GPIO_InitStructure.GPIO_Pin = GPIO_Busy_Pin;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_14;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;
-	GPIO_Init(GPIO_Busy_Port, &GPIO_InitStructure);
+	GPIO_Init(GPIOC, &GPIO_InitStructure);
 
-	// USART 初始化设置
 	USART_InitTypeDef USART_InitStructure;
 	USART_InitStructure.USART_BaudRate = bound;
 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
@@ -141,7 +140,7 @@ void MP3_Last(void)
 
 u8 MP3_State(void)
 {
-    return GPIO_ReadInputDataBit(GPIO_Busy_Port, GPIO_Busy_Pin);
+    return GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_14);
 }
 
 /*  暂停 0xAA, 0x03, 0x00, 0xAD

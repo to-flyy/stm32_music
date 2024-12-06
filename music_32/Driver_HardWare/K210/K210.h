@@ -8,6 +8,10 @@
 #include "task.h"
 #include "queue.h"
 
+#define K210_MUSIC_1 	"ZJL"
+#define K210_MUSIC_2 	"JW"
+#define K210_MUSIC_3 	"FZU"
+
 void K210_Init(uint32_t Baud);
 
 extern char K210_RxPacket[100];

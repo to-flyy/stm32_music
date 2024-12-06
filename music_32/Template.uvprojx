@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\Driver_HardWare\LED;.\Public\system;.\Public\SysTick;.\Public\Delay;.\Driver_HardWare\KEY;.\freertos;.\freertos\inc;.\freertos\port;.\freertos\src;.\Driver_HardWare\K210;.\Driver_HardWare\BuJin;.\Driver_HardWare\MP3;.\Driver_HardWare\YuYin</IncludePath>
+              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\Driver_HardWare\LED;.\Public\system;.\Public\SysTick;.\Public\Delay;.\freertos;.\freertos\inc;.\freertos\port;.\freertos\src;.\Driver_HardWare\K210;.\Driver_HardWare\BuJin;.\Driver_HardWare\MP3;.\Driver_HardWare\YuYin;.\Driver_HardWare\LCD</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -450,11 +450,6 @@
               <FilePath>.\Driver_HardWare\LED\LED.c</FilePath>
             </File>
             <File>
-              <FileName>Key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Driver_HardWare\KEY\Key.c</FilePath>
-            </File>
-            <File>
               <FileName>K210.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Driver_HardWare\K210\K210.c</FilePath>
@@ -473,6 +468,11 @@
               <FileName>YuYin.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Driver_HardWare\YuYin\YuYin.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Driver_HardWare\LCD\LCD.c</FilePath>
             </File>
           </Files>
         </Group>

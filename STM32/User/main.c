@@ -1,12 +1,15 @@
+/* 系统头文件 */
 #include "system.h"
 #include "SysTick.h"
 #include "Delay.h"
 #include "string.h"
 
+/* FreeRTOS头文件 */
 #include "freertos.h"
 #include "task.h"
 #include "queue.h"
 
+/* 硬件头文件 */
 #include "LED.h"
 #include "K210.h"
 #include "motor.h"
@@ -14,10 +17,6 @@
 #include "YuYin.h"
 #include "LCD.h"
 
-
-typedef struct {
-    char* command;  // 命令字符串
-} MotorCommand;
 
 // 任务句柄
 TaskHandle_t StartTask_Handler;
@@ -48,6 +47,7 @@ void YuYin_Task(void);
 void LCD_Task(void);
 void HardWare_Init(void);
 
+/* main函数 */
 int main()
 {
 	HardWare_Init();
@@ -65,6 +65,7 @@ int main()
 
 void Start_Task(void)
 {
+	/* 确保在创建任务和队列时不会被中断，以防止竞态条件 */
 	taskENTER_CRITICAL(); // 进入临界区
 	
 	// 创建队列
@@ -72,7 +73,7 @@ void Start_Task(void)
                                      (UBaseType_t)sizeof(K210_RxPacket));
 	
 	MP3Queue_Handler = xQueueCreate((UBaseType_t)10,           
-                                    (UBaseType_t)sizeof(MotorCommand));
+                                    (UBaseType_t)sizeof(char));
 	
 	YuYinQueue_Handler = xQueueCreate((UBaseType_t)10,           		 
                                      (UBaseType_t)sizeof(YuYin_RxPacket));
@@ -139,16 +140,13 @@ void YuYin_Task(void)
 }
 
 void MP3_Task(void)
-{
-	MotorCommand cmd;
-	
+{	
 	while(1)
 	{
 		// 接收队列返回值
 		K210Queue_Return = xQueueReceive((QueueHandle_t)K210Queue_Handler,
                                          (void *const)&K210_RxPacket,    
-                                         (TickType_t)0);   
-										   
+                                         (TickType_t)0);   										   
 		if (pdTRUE == K210Queue_Return)
 		{
 			if(strcmp(K210_RxPacket, K210_MUSIC_1) == 0)
@@ -170,8 +168,7 @@ void MP3_Task(void)
 		
 		YuYinQueue_Return = xQueueReceive((QueueHandle_t)YuYinQueue_Handler,
                                          (void *const)&YuYin_RxPacket,    
-                                         (TickType_t)0);  
-										 
+                                         (TickType_t)0);  										 
 		if (pdTRUE == YuYinQueue_Return)
 		{			
 			Flag_LED = 0; 

@@ -29,7 +29,7 @@ task = kpu.load("/sd/model-166275.kmodel") #模型SD卡上
 #网络参数
 anchor = (6.94, 6.87, 6.75, 6.91, 6.62, 6.66, 6.81, 6.75, 6.94, 6.94)
 
-a = kpu.init_yolo2(task, 0.70, 0.20, 5, anchor)
+a = kpu.init_yolo2(task, 0.78, 0.20, 5, anchor)
 
 while(True):
 

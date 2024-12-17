@@ -81,7 +81,7 @@ void Start_Task(void)
 	LCDQueue_Handler = xQueueCreate((UBaseType_t)10,           		 
                                      (UBaseType_t)sizeof(LCD_RxData));
 	
-										
+	// 创建任务						
 	xTaskCreate((TaskFunction_t)K210_Task,
                 (const char *)"K210_Task",
                 (uint16_t)128,

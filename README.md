@@ -1,4 +1,4 @@
-                        基于FreeRTOS的智能点歌机
+                                                                        基于FreeRTOS的智能点歌机
 
 （只显示SMT32代码，K210,LCD,PCB受限）
 
@@ -23,5 +23,6 @@
 
 
 https://github.com/to-flyy/stm32_music
+
 to-flyy@qq.com   github author: to-flyy
 
